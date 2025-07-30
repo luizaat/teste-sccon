@@ -1,0 +1,58 @@
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  .header-logo {
+    height: 32px;
+    width: auto;
+    object-fit: contain;
+    border-radius: 4px;
+  }
+
+  span {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: inherit;
+  }
+}
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-left: auto;
+
+  .mat-mdc-unelevated-button {
+    min-width: 120px;
+    padding: 8px 16px;
+    text-align: center;
+    white-space: nowrap;
+    min-height: 36px;
+    transition: all 0.2s ease-in-out;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-brand {
+    gap: 8px;
+
+    .header-logo {
+      height: 28px;
+    }
+
+    span {
+      font-size: 1.1rem;
+    }
+  }
+
+  .header-actions {
+    gap: 8px;
+
+    .mat-mdc-unelevated-button {
+      min-width: 80px;
+      padding: 6px 12px;
+      font-size: 0.875rem;
+    }
+  }
+}

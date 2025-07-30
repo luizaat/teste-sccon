@@ -1,0 +1,36 @@
+<section class="busca-cep" role="search">
+  <form class="busca-cep__form" (ngSubmit)="onSubmit($event)">
+    <mat-form-field
+      subscriptSizing="dynamic"
+      appearance="outline"
+      [ngClass]="{'mat-form-field-invalid': cep.invalid && (cep.dirty || cep.touched)}">
+      <mat-label>CEP</mat-label>
+      <input
+        matInput
+        type="text"
+        placeholder="00000-000"
+        maxlength="9"
+        aria-label="Digite o CEP para buscar o endereço"
+        autocomplete="postal-code"
+        [formControl]="cep"
+        (input)="onCepInput($event)"
+      >
+      @if (cep.invalid && (cep.dirty || cep.touched)) {
+        <mat-error>{{ getErrorMessage() }}</mat-error>
+      }
+    </mat-form-field>
+
+    <button
+      type="submit"
+      matButton="filled"
+      color="primary"
+      [disabled]="isLoading || cep.invalid"
+      (click)="onSubmit($event)">
+      @if (isLoading) {
+        Buscando...
+      } @else {
+        Buscar
+      }
+    </button>
+  </form>
+</section>

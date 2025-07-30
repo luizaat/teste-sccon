@@ -1,0 +1,150 @@
+.listagem-endereco {
+  padding: 1rem;
+  margin-top: 2rem;
+
+  .mat-elevation-z8 {
+    max-height: 400px;
+    overflow: auto;
+  }
+
+  table {
+    width: 100%;
+    .mat-column-cep {
+      max-width: 120px;
+      width: 120px;
+    }
+    .mat-column-endereco {
+      min-width: 300px;
+      width: 60%;
+    }
+    .mat-column-data {
+      max-width: 180px;
+      width: 180px;
+    }
+  }
+
+  .mat-cell, .mat-header-cell {
+    padding: 8px 16px;
+    text-align: left;
+
+    &:first-child {
+      padding-left: 24px;
+    }
+
+    &:last-child {
+      padding-right: 24px;
+    }
+  }
+
+  .mat-cell {
+    word-wrap: break-word;
+    white-space: normal;
+  }
+
+  .mat-row.no-data {
+    .mat-cell {
+      text-align: center;
+      font-style: italic;
+      color: rgba(0, 0, 0, 0.54);
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 0.5rem;
+
+    .mat-elevation-z8 {
+      max-height: 350px;
+    }
+
+    table {
+      .mat-column-cep {
+        max-width: 100px;
+        width: 100px;
+      }
+
+      .mat-column-endereco {
+        min-width: 200px;
+        width: 50%;
+      }
+
+      .mat-column-data {
+        max-width: 130px;
+        width: 130px;
+      }
+    }
+
+    .mat-cell, .mat-header-cell {
+      padding: 6px 12px;
+      font-size: 0.9rem;
+
+      &:first-child {
+        padding-left: 16px;
+      }
+
+      &:last-child {
+        padding-right: 16px;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 0.25rem;
+    margin-top: 1rem;
+
+    .mat-elevation-z8 {
+      max-height: 300px;
+    }
+
+    table {
+      .mat-column-cep {
+        max-width: 80px;
+        width: 80px;
+      }
+
+      .mat-column-endereco {
+        min-width: 150px;
+        width: 60%;
+      }
+
+      .mat-column-data {
+        max-width: 100px;
+        width: 100px;
+      }
+    }
+
+    .mat-cell, .mat-header-cell {
+      padding: 4px 8px;
+      font-size: 0.8rem;
+
+      &:first-child {
+        padding-left: 12px;
+      }
+
+      &:last-child {
+        padding-right: 12px;
+      }
+    }
+
+    .mat-column-data {
+      .mat-header-cell {
+        font-size: 0.7rem;
+      }
+    }
+  }
+
+  @media (max-width: 320px) {
+    .mat-elevation-z8 {
+      max-height: 250px;
+      overflow-x: auto;
+    }
+
+    table {
+      min-width: 300px;
+    }
+
+    .mat-cell, .mat-header-cell {
+      padding: 2px 4px;
+      font-size: 0.75rem;
+    }
+  }
+}

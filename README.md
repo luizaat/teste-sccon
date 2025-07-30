@@ -1,59 +1,164 @@
-# TesteSccon
+# SCCON Busca - Sistema de Consulta de Endereços
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.0.
+Sistema para busca de endereços via CEP utilizando a API do ViaCEP, desenvolvido com Angular 19 e Angular Material 3.
 
-## Development server
+## 📋 Funcionalidades
 
-To start a local development server, run:
+- ✅ **Busca de CEP**: Consulta endereços através do CEP utilizando API ViaCEP
+- ✅ **Listagem de Resultados**: Exibição em tabela responsiva com CEP, Endereço e Data da busca
+- ✅ **Interface Responsiva**: Design adaptativo para desktop, tablet e mobile
+- ✅ **Material Design 3**: UI moderna seguindo as diretrizes do Material Design
+- ✅ **Validação de Formulários**: Reactive Forms com validação de CEP
+- ✅ **Roteamento**: Navegação entre páginas Home e Endereços
+
+## 🛠️ Tecnologias Utilizadas
+
+- **Frontend**: Angular 19 (Standalone Components)
+- **UI/UX**: Angular Material 3 com tema customizado
+- **Formulários**: Reactive Forms
+- **HTTP**: HttpClient com RxJS para consumo de APIs
+- **Estilização**: SCSS com design responsivo
+- **API Externa**: [ViaCEP](https://viacep.com.br/) para consulta de endereços
+
+## 📋 Pré-requisitos
+
+Antes de começar, certifique-se de ter instalado:
+
+- **Node.js** (versão 18.x ou superior)
+- **npm** (versão 9.x ou superior) ou **pnpm** (recomendado)
+- **Angular CLI** (versão 19.x)
+
+### Verificar versões instaladas:
 
 ```bash
+node --version
+npm --version
+ng version
+```
+
+### Instalar Angular CLI (se necessário):
+
+```bash
+npm install -g @angular/cli@19
+```
+
+## 🚀 Instalação e Configuração
+
+### 1. Clone o repositório
+
+```bash
+git clone <url-do-repositorio>
+cd teste-sccon
+```
+
+### 2. Instale as dependências
+
+```bash
+# Usando npm
+npm install
+
+# Ou usando pnpm (recomendado)
+pnpm install
+```
+
+### 3. Configuração do ambiente
+
+O projeto utiliza a API pública do ViaCEP, não necessitando configurações adicionais de ambiente.
+
+## 💻 Desenvolvimento
+
+### Servidor de desenvolvimento
+
+Para iniciar o servidor de desenvolvimento:
+
+```bash
+# Usando Angular CLI
 ng serve
+
+# Ou usando npm/pnpm scripts
+npm run start
+# ou
+pnpm start
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Acesse `http://localhost:4200/` no navegador. A aplicação recarregará automaticamente quando houver mudanças nos arquivos.
 
-## Code scaffolding
+### Estrutura do projeto
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+```
+src/
+├── app/
+│   ├── core/                     # Módulos centrais (guards, interceptors)
+│   ├── features/                 # Funcionalidades da aplicação
+│   │   ├── home/                # Página inicial
+│   │   └── enderecos/           # Sistema de busca de CEP
+│   │       ├── components/      # Componentes específicos
+│   │       ├── interfaces/      # Tipagens TypeScript
+│   │       └── services/        # Serviços para API
+│   ├── shared/                  # Componentes compartilhados
+│   │   └── components/
+│   │       └── header/          # Cabeçalho da aplicação
+│   ├── app.config.ts           # Configuração da aplicação
+│   ├── app.routes.ts           # Definição de rotas
+│   └── app.ts                  # Componente raiz
+├── styles.scss                 # Estilos globais e tema Material
+└── public/                     # Arquivos estáticos
+    └── logo.png               # Logo da aplicação
+```
+
+## 🔨 Build e Deploy
+
+### Build para produção
 
 ```bash
-ng generate component component-name
+# Build otimizado para produção
+ng build --configuration=production
+
+# Ou usando npm/pnpm
+npm run build
+# ou
+pnpm build
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Os arquivos otimizados serão gerados na pasta `dist/`.
 
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+### Build para desenvolvimento
 
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+### Servidor de produção local
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+Para testar o build de produção localmente:
 
 ```bash
-ng test
+# Instalar serve globalmente (se necessário)
+npm install -g serve
+
+# Servir arquivos da pasta dist
+serve -s dist/teste-sccon
 ```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+## 🔧 Scripts Disponíveis
 
 ```bash
-ng e2e
+# Desenvolvimento
+npm run start          # Servidor de desenvolvimento
+npm run build          # Build para produção
+npm run watch          # Build em modo watch
+npm run test           # Testes unitários
+
+# Linting e formatação
+ng lint                # Verificar código com ESLint
+ng format              # Formatar código com Prettier
 ```
+## 📄 Licença
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Este projeto foi desenvolvido como teste técnico para a SCCON.
 
-## Additional Resources
+## 👨‍💻 Desenvolvedor
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+**Luiz Pelegrini**
+- Teste realizado em: 29/07/2025
+- Versão do Angular: 19.x
+- Versão do Material: 19.x

@@ -1,0 +1,14 @@
+.enderecos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100dvh - 64px);
+
+  &__title {
+    font-size: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--mat-sys-outline);
+    color: var(--mat-sys-on-surface);
+  }
+}

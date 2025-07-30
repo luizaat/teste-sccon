@@ -1,0 +1,33 @@
+<section class="listagem-endereco">
+  <div class="mat-elevation-z8">
+    <table mat-table [dataSource]="listaEnderecos()" class="mat-elevation-z8">
+
+      <ng-container matColumnDef="cep">
+        <th mat-header-cell *matHeaderCellDef>CEP</th>
+        <td mat-cell *matCellDef="let endereco">{{ endereco.cep }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="endereco">
+        <th mat-header-cell *matHeaderCellDef>Endereço</th>
+        <td mat-cell *matCellDef="let endereco">
+          {{ endereco.logradouro }}, {{ endereco.bairro }}<br>
+          {{ endereco.localidade }} - {{ endereco.uf }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="data">
+        <th mat-header-cell *matHeaderCellDef>Data da Busca</th>
+        <td mat-cell *matCellDef="let endereco">{{ endereco.dataBusca | date:'dd/MM/yyyy HH:mm' }}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+      <tr class="mat-row no-data" *matNoDataRow>
+        <td class="mat-cell" [attr.colspan]="displayedColumns.length">
+          Nenhum endereço encontrado.
+        </td>
+      </tr>
+    </table>
+  </div>
+</section>

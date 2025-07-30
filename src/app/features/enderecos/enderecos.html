@@ -1,0 +1,7 @@
+<main class="enderecos">
+  <h1 class="enderecos__title">Busca de Endereços</h1>
+
+  <app-busca-cep (cepEmitter)="onCepSearched($event)"></app-busca-cep>
+
+  <app-listagem-endereco [listaEnderecos]="listaEnderecos()"></app-listagem-endereco>
+</main>
