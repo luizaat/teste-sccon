@@ -30,7 +30,7 @@ Antes de começar, certifique-se de ter instalado:
 
 - **Node.js** (versão 18.x ou superior)
 - **npm** (versão 9.x ou superior) ou **pnpm** (recomendado)
-- **Angular CLI** (versão 19.x)
+- **Angular CLI** (versão 20.x)
 
 ### Verificar versões instaladas:
 
