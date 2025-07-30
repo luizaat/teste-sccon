@@ -1,6 +1,6 @@
 # SCCON Busca - Sistema de Consulta de Endereços
 
-Sistema para busca de endereços via CEP utilizando a API do ViaCEP, desenvolvido com Angular 19 e Angular Material 3.
+Sistema para busca de endereços via CEP utilizando a API do ViaCEP, desenvolvido com Angular 20 e Angular Material 3.
 
 ## Abordagens
 - Tratei esse projeto como, além de um teste, um estudo pessoal para aprender mais sobre as novas versões do Angular, utilização de Signals e das novas diretrizes que o framework nos fornece. Também queria trabalhar com os novos tokens de costumização dos componentes do Angular Material 3. Esse projeto seria facilmente adaptado para versões mais antigas, substituindo diretrizes, adicionando modulos e alterando o funcionamento de alguns componentes do Material.
@@ -17,7 +17,7 @@ Sistema para busca de endereços via CEP utilizando a API do ViaCEP, desenvolvid
 
 ## 🛠️ Tecnologias Utilizadas
 
-- **Frontend**: Angular 19 (Standalone Components)
+- **Frontend**: Angular 20 (Standalone Components)
 - **UI/UX**: Angular Material 3 com tema customizado
 - **Formulários**: Reactive Forms
 - **HTTP**: HttpClient com RxJS para consumo de APIs
@@ -164,5 +164,5 @@ Este projeto foi desenvolvido como teste técnico para a SCCON.
 
 **Luiz Pelegrini**
 - Teste realizado em: 29/07/2025
-- Versão do Angular: 19.x
-- Versão do Material: 19.x
+- Versão do Angular: 20.x
+- Versão do Material: 20.x
